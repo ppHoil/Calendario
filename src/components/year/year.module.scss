@@ -1,0 +1,16 @@
+.year{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); // 7 días para una semana completa
+    gap: 10px;
+  }
+  @media (min-width : 720px){
+    .year{
+      grid-template-columns: repeat(2, 1fr); // 7 días para una semana completa
+    }
+    
+  }
+  @media (min-width : 1080px){
+    .year{
+      grid-template-columns: repeat(3, 1fr); // 7 días para una semana completa
+    }
+  }

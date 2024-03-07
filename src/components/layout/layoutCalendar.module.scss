@@ -1,0 +1,99 @@
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    padding: 0 20px; // Reducción de padding para pantallas más pequeñas
+}
+
+.innerLayout {
+    padding: 24px 0;
+}
+
+.innerContent {
+    padding: 0 24px;
+}
+
+.floatButton {
+    width: 80px;
+    height: 80px;
+    position: fixed; // Ejemplo para posicionar el botón flotante
+    right: 20px; // Posición derecha
+    bottom: 20px; // Posición inferior
+}
+
+.menuItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menuItem h2 {
+    color: inherit; // El color se aplicará dinámicamente mediante React
+}
+
+.menuItemIcon {
+    color: red;
+}
+
+.modalInput {
+    margin-bottom: 1rem;
+}
+
+.colorLabel {
+    margin-right: 10px;
+}
+
+// Media queries
+@media (min-width: 720px) {
+    .content {
+        padding: 0 48px; // Aumentar el padding para pantallas medianas
+    }
+    .innerLayout {
+        display: flex;
+        flex-direction: column; // Cambia la dirección de flexión para apilar verticalmente
+    }
+
+    .sider {
+        width: 100%; // El Sider toma todo el ancho
+        order: -1; // Coloca el Sider antes del contenido principal (los meses)
+    }
+
+    .innerContent {
+        width: 100%; // El contenido principal toma todo el ancho
+        order: 1; // Asegura que el contenido siga al Sider
+    }
+
+    // Ajustes adicionales para pantallas de al menos 720px de ancho aquí
+}
+
+@media (min-width: 1080px) {
+    .header {
+        justify-content: space-between; // Ajuste para distribuir elementos del header
+    }
+
+    .menuItem {
+        justify-content: start; // Ajuste para alinear elementos del menú al inicio
+        gap: 20px; // Espaciado entre elementos del menú
+    }
+
+    // Ajustes adicionales para pantallas de al menos 1080px de ancho aquí
+}
+
+// Media query para pantallas móviles
+@media (max-width: 719px) {
+    .innerLayout {
+       display: block;
+    }
+
+    .sider {
+        width: 100%; // El Sider toma todo el ancho
+    }
+
+    .innerContent {
+        width: 100%; // El contenido principal toma todo el ancho
+        order: 1; // Asegura que el contenido siga al Sider
+    }
+
+}

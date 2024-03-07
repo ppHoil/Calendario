@@ -1,0 +1,29 @@
+.bar{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+}
+.activeC{
+    margin: 10px;
+    label{
+        margin-right: 5px;
+    }
+}
+.optionC{
+    margin: 10px;
+    label{
+        margin-right: 5px;
+    }
+}
+
+.buttoms{
+    button{
+        margin: 5px;
+    }
+}
+
+@media (max-width: 719px) {
+    .bar{
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+}
